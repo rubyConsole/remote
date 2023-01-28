@@ -4,7 +4,7 @@
 
 ## Get started
 
-You can install `remote` directly on the terminal
+You can install `remote` directly on the terminal. [Read the documentation](https://ruby-console.gitbook.io/remote)
 
 ### Windows
 
