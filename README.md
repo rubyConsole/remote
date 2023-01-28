@@ -4,7 +4,7 @@
 
 ## Get started
 
-You can install `remote` for free directly with the terminal.
+You can install `remote` directly on the terminal
 
 ### Windows
 
