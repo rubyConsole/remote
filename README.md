@@ -4,6 +4,8 @@
 
 ## Get started
 
+You can install `remote` for free directly with the terminal.
+
 ### Windows
 
 Run this repository on Windows with the `Start Command Prompt with Ruby` app
