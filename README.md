@@ -4,11 +4,22 @@
 
 ### Windows
 
-Run this repository on Windows with the `Start Command Prompt with Ruby` app.
+Run this repository on Windows with the `Start Command Prompt with Ruby` app
 
 ```
 cd remote
 ```
 ```
 ruby bin/rails server
+```
+
+### Linux
+
+Run this repository on Linux and other operating systems with the `terminal`
+
+```
+cd remote
+```
+```
+bin/rails server
 ```
