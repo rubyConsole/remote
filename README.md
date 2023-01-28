@@ -1,5 +1,7 @@
 # remote
 
+:wave: Welcome to the open-source remote control software repository
+
 ## Get started
 
 ### Windows
