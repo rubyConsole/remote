@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: # bin/rails server
+      - run: gem install rails
+      - run: cd remote
+      - run: bin/rails server
