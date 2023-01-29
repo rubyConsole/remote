@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     services:
       postgres:
         image: postgres:11-alpine
@@ -28,12 +28,12 @@ jobs:
         with:
           bundler-cache: true
       - name: Set up database schema
-        run: ruby bin/rails db:schema:load
+        run: bin/rails db:schema:load
       - name: Run tests
-        run: ruby bin/rake
+        run: bin/rake
 
   lint:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -43,8 +43,8 @@ jobs:
           bundler-cache: true
       # Add or replace any other lints here
       - name: Security audit dependencies
-        run: ruby bin/bundler-audit --update
+        run: bin/bundler-audit --update
       - name: Security audit application code
-        run: ruby bin/brakeman -q -w2
+        run: bin/brakeman -q -w2
       - name: Lint Ruby files
-        run: ruby bin/rubocop --parallel
+        run: bin/rubocop --parallel
