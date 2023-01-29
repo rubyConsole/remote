@@ -13,7 +13,6 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: false
       - run: git config --global init.defaultBranch main
-      - run: git remote add origin git@github.com:rubyConsole/remote.git
       - run: gem install rails
       - run: rails new remote
       - run: git commit -m"[Run Build]"
