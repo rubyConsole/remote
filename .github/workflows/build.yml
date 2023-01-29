@@ -14,5 +14,7 @@ jobs:
           bundler-cache: false
       - run: gem install rails
         name: Install RubyGems
+      - run: rails remote
+        name: Create project
       - run: bin/rails server
         name: Run server
