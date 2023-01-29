@@ -24,9 +24,10 @@ jobs:
         uses: actions/checkout@v3
       # Add or replace dependency steps here
       - name: Install Ruby and gems
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4
         with:
           bundler-cache: true
+          ruby-version: 7.0
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run tests
@@ -38,7 +39,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Install Ruby and gems
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4v1.127.0
+        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4
         with:
           bundler-cache: true
       # Add or replace any other lints here
