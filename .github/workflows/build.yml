@@ -12,6 +12,7 @@ jobs:
         with:
           ruby-version: '3.0'
           bundler-cache: false
+      - run: git config --global init.defaultBranch main
       - run: gem install rails
         name: Install RubyGems
       - run: rails new remote
