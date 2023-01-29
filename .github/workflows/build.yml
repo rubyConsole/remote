@@ -1,0 +1,9 @@
+name: Build
+run-name: Build repository
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: # bin/rails server
