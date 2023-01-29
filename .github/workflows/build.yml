@@ -11,5 +11,6 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: false
       - run: gem install rails
+        name: Ksk
       - run: cd remote
       - run: bin/rails server
