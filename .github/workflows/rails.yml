@@ -1,4 +1,4 @@
-name: "Ruby on Rails"
+name: "Rails"
 on:
   push:
     branches: [ "main" ]
@@ -13,22 +13,22 @@ jobs:
         ports:
           - "5432:5432"
         env:
-          POSTGRES_DB: rails_test
+          POSTGRES_DB: main
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      DATABASE_URL: "postgres://rails:password@localhost:5432/main"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
       # Add or replace dependency steps here
-      - name: Install Ruby and gems
+      - name: Setup Ruby
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4
         with:
           bundler-cache: true
           ruby-version: 3.1.3
-      - name: Set up database schema
+      - name: Set up database
         run: bin/rails db:schema:load
       - name: Run tests
         run: bin/rake
@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install Ruby and gems
+      - name: Install Ruby
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4
         with:
           bundler-cache: true
