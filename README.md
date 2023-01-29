@@ -11,6 +11,9 @@ You can install `remote` directly on the terminal. [Read the documentation](http
 Run this repository on Windows with the `Start Command Prompt with Ruby` app
 
 ```
+gem install rails
+```
+```
 cd remote
 ```
 ```
@@ -21,6 +24,9 @@ ruby bin/rails server
 
 Run this repository on Linux and other operating systems with the `terminal`
 
+```
+gem install rails
+```
 ```
 cd remote
 ```
