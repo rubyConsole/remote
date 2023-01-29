@@ -12,3 +12,7 @@ Here are some ground rules for pull requests and issues
 ## Code Changes
 
 We are programming `remote` with `Ruby on Rails`. You musn't change the software environment or delete `Ruby on Rails` system files.
+
+## Security of files
+
+We use the `SHA512` protocol to save files on a server. Please generate a `SHA512` hash for as many variables as possible. We will check the code and correct if required some not `SHA512` hash generated variables and more. The variables value musn't contains `SHA512` hash generated values.
