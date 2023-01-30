@@ -3,15 +3,23 @@ run-name: Build repository
 on: [push]
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        name: Run Actions
       - uses: ruby/setup-ruby@v1
+        name: Run Actions
         with:
           ruby-version: '3.0'
           bundler-cache: false
       - run: git config --global init.defaultBranch main
+        name: Run Git
       - run: gem install rails
+        name: Install Rails
       - run: rails new remote
+        name: Create new Ruby on Rails project
       - run: cd remote
+        name: Set up the new project
       - run: bin/rails server
+        name: Run Server
