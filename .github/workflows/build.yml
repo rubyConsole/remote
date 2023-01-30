@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        name: Import Checkout Version 3
       - uses: ruby/setup-ruby@v1
-        name: Import Ruby Version 1
         with:
           ruby-version: '3.0'
           bundler-cache: false
