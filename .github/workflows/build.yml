@@ -12,7 +12,6 @@ jobs:
           bundler-cache: false
       - run: git config --global init.defaultBranch main
       - run: gem install rails
-      - run: cd binnn
       - run: rails new remote
       - run: cd remote
       - run: bin/rails server
