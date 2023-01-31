@@ -21,7 +21,7 @@ jobs:
         name: Create new Ruby on Rails project
       - run: cd /home/runner/work/remote/remote/remote/.git/ && ls -a
         name: Set up directory
-      - run: cd remote
+      - run: cd /home/runner/work/remote/remote/remote/.git/
         name: Set up the new project
       - run: bin/rails server
         name: Run Server
