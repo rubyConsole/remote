@@ -19,6 +19,13 @@ jobs:
         name: Install Rails
       - run: rails new remote
         name: Create new Ruby on Rails project
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: git
+      - uses: actions/download-artifact@v3
+        with:
+          name: homework
       - run: cd remote
         name: Set up the new project
       - run: bin/rails server
