@@ -13,6 +13,7 @@ jobs:
         with:
           ruby-version: '3.0'
           bundler-cache: false
+      - run: bundle install --path home
       - run: git config --global init.defaultBranch main
         name: Run Git
       - run: gem install rails
