@@ -14,18 +14,12 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: false
       - run: git config --global init.defaultBranch main
+      - run: echo "$HOME" >> $GITHUB_PATH
         name: Run Git
       - run: gem install rails
         name: Install Rails
       - run: rails new remote
         name: Create new Ruby on Rails project
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Build
-          path: git
-      - uses: actions/download-artifact@v3
-        with:
-          name: homework
       - run: cd remote
         name: Set up the new project
       - run: bin/rails server
