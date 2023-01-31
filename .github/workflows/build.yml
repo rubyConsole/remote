@@ -15,10 +15,10 @@ jobs:
           bundler-cache: false
       - run: git config --global init.defaultBranch main
         name: Run Git
+      - run: cd remote && ls -a
+        name: Set up directory
       - run: gem install rails
         name: Install Rails
-      - run: cd project_directory && ls -a
-        name: Set up directory
       - run: rails new remote
         name: Create new Ruby on Rails project
       - run: cd remote
