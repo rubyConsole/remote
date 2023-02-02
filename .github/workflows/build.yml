@@ -2,9 +2,9 @@ name: Build
 run-name: Build repository
 on: [push]
 jobs:
-  build:
-    name: Build
+  import_checkout:
+    name: Import Checkout
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-        name: Import actions/checkout@v2
+        name: Run job
