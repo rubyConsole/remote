@@ -7,4 +7,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-        name: Run job
+        name: Install Checkout
+  import_ruby:
+    name: Import Ruby
+    runs-on: windows-latest
+    steps:
+      - uses: ruby/setup-ruby@v1
+        name: Install Ruby
+        with:
+          ruby-version: '3.0'
+          bundler-cache: false
