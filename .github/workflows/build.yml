@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
         name: Run Actions
@@ -13,16 +13,13 @@ jobs:
         with:
           ruby-version: '3.0'
           bundler-cache: false
-      - run: bundle install --path home
       - run: git config --global init.defaultBranch main
         name: Run Git
       - run: gem install rails
         name: Install Rails
       - run: rails new remote
         name: Create new Ruby on Rails project
-      - run: cd /home/runner/work/remote/remote/remote/.git/ && ls -a
-        name: Set up directory
-      - run: cd /home/runner/work/remote/remote/remote/.git/
+      - run: cd remote
         name: Set up the new project
-      - run: bin/rails server
+      - run: ruby bin/rails server
         name: Run Server
