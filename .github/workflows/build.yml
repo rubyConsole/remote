@@ -2,6 +2,15 @@ name: Build
 run-name: Build repository
 on: [push]
 jobs:
+  good:
+    name: djs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Ruby environment with ruby-build
+        uses: clupprich/ruby-build-action@v1.3.0
+        with:
+          ruby-version: 2.6.5
+          cache-available: false
   import_checkout:
     name: Import Checkout
     runs-on: ubuntu-latest
