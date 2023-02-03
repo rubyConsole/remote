@@ -4,13 +4,13 @@ on: [push]
 jobs:
   import_checkout:
     name: Import Checkout
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name: Install Checkout
   import_ruby:
     name: Import Ruby
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: ruby/setup-ruby@v1
         name: Install Ruby
