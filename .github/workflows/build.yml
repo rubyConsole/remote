@@ -24,6 +24,6 @@ jobs:
    steps:
      - run: |
           echo "::group::Print Build Version"
-          echo "Inside group"
+          echo "build@v1"
           echo "::endgroup::"
        name: Build
