@@ -23,6 +23,6 @@ jobs:
    needs: [import_checkout, import_ruby]
    steps:
      - run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"
+          echo "::group::My title"
+          echo "Inside group"
+          echo "::endgroup::"
