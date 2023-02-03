@@ -19,7 +19,7 @@ jobs:
           bundler-cache: false
   build_project:
    name: Build project
-   runs-on: windows-latest
+   runs-on: ubuntu-latest
    needs: [import_checkout, import_ruby]
    steps:
      - run: echo Hello
