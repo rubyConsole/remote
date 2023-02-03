@@ -1,7 +1,5 @@
 # remote
 
-[![Build](https://github.com/rubyConsole/remote/actions/workflows/build.yml/badge.svg)](https://github.com/rubyConsole/remote/actions/workflows/build.yml)
-
 :wave: Welcome to the open-source remote control software repository
 
 ## Get started
