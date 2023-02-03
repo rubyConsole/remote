@@ -3,7 +3,7 @@ run-name: Build repository
 on: [push]
 jobs:
   good:
-    name: djs
+    name: djss
     runs-on: ubuntu-latest
     steps:
       - name: Setup Ruby environment with ruby-build
