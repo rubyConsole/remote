@@ -22,4 +22,6 @@ jobs:
    runs-on: ubuntu-latest
    needs: [import_checkout, import_ruby]
    steps:
-     - run: echo Hello
+     - run: echo "::group::Hello"
+     - run: echo "mssm"
+     - run: echo "::endgroup::"
