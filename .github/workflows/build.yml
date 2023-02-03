@@ -6,8 +6,7 @@ jobs:
     name: djss
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Ruby environment with ruby-build
-        uses: clupprich/ruby-build-action@v1.3.0
+      - uses: clupprich/ruby-build-action@v1.3.0
         with:
           ruby-version: 2.6.5
           cache-available: false
