@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        name: Install Checkout
+        name: Install Checkoute
   import_ruby:
     name: Import Ruby
     runs-on: ubuntu-latest
