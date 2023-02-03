@@ -1,0 +1,2 @@
+class DeviceCommand < ApplicationRecord
+end
